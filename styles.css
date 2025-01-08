@@ -1,0 +1,39 @@
+body {
+    background-image: url(images/purple_wave_background.jpg);
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.text-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.title {
+    font-family: LoveDays;
+    font-size: 5rem;
+    background-image: linear-gradient(red, purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+    color: transparent;
+}
+
+.shadow {
+    transform: translate(0%, -166%);
+    z-index: -1;
+    text-shadow: 2px 2px 4px black;
+}
+
+@font-face {
+    font-family: "LoveDays";
+    src:
+      local("LoveDays"),
+      url(fonts/LoveDays.ttf)
+      format("truetype");
+}
+
