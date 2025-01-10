@@ -1,32 +1,128 @@
-body {
-    background-image: url(images/purple_wave_background.jpg);
+:root {
+    --title-size: 5rem;
+    --subtitle-size: 3rem;
+    --grid-sizes: 250px;
 }
 
-.container {
+body {
+    background-image: url(images/purple_wave_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: var(--title-size);
+    margin-top: -10rem;
+}
+
+h2 {
+    font-size: var(--subtitle-size);
+}
+
+.title-image {
     position: relative;
-    text-align: center;
+    display: block;
+    z-index: -1;
+    margin: auto;
+}
+
+.member-photo {
+    width: var(--grid-sizes);
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+
+.main-text {
+    background-color: lightpink;
+    font-size: 1rem;
+    text-align: justify;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.grid-text-bottom {
+    max-width: var(--grid-sizes);
+    margin-right: 10px;
+}
+
+.centered {
+    max-width: 50rem;
+    margin: auto;
+    text-indent: 2rem;
+}
+
+.grid-text-left {
+    font-size: 1.5vw;
+    text-indent: 2rem;
+    display: inline-block;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: var(--grid-sizes);
+}
+
+.grid-image {
+    height: member-photo;
+}
+
+hr {
+    border: 3px solid purple;
+    border-radius: 3px;
 }
 
 .text-wrapper {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    text-align: center;
 }
 
-.title {
+.love-days {
     font-family: LoveDays;
-    font-size: 5rem;
     background-image: linear-gradient(red, purple);
     background-clip: text;
-    -webkit-background-clip: text;
-    position: relative;
     color: transparent;
 }
 
-.shadow {
-    transform: translate(0%, -166%);
-    z-index: -1;
+.love-days::before {
+    content: attr(content);
+    position: absolute;
     text-shadow: 2px 2px 4px black;
+    z-index: -1;
+}
+
+.inktype {
+    font-family: Inktype;
+}
+
+.button-link {
+    text-decoration: none;
+}
+
+.button-link:hover .button {
+    background: radial-gradient(white, rgb(125, 50, 230));
+    box-shadow: 8px 8px 16px black;
+}
+
+.button {
+    background:radial-gradient(white, rgb(150, 75, 255));
+    width: 25rem;
+    margin: auto;
+    border-radius: 1rem 3rem;
+    position: relative;
+    z-index: -2;
+    box-shadow: 4px 4px 8px black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    row-gap: 50px;
 }
 
 @font-face {
@@ -37,3 +133,10 @@ body {
       format("truetype");
 }
 
+@font-face {
+    font-family: "Inktype";
+    src:
+      local("Inktype"),
+      url(fonts/Inktype.ttf)
+      format("truetype");
+}
