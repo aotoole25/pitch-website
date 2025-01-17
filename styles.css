@@ -16,11 +16,21 @@ body {
 
 h1 {
     font-size: var(--title-size);
-    margin-top: -10rem;
+    margin-top: -17rem;
+    margin-bottom: 13rem;
 }
 
 h2 {
     font-size: var(--subtitle-size);
+}
+
+p {
+    font-size: 21px;
+    text-indent: 0;
+}
+
+h3 {
+    font-size: 25px;
 }
 
 .title-image {
@@ -47,6 +57,7 @@ footer {
     text-align: justify;
     border-radius: 1rem;
     padding: 1rem;
+    font-size: 20px;
 }
 
 .grid-text-bottom {
